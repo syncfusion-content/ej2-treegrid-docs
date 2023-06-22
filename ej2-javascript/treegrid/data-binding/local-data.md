@@ -28,32 +28,32 @@ The [`childMapping`](../../api/treegrid#childMapping) property is used to map th
 
 The following code example shows you how to bind the hierarchical local data into the TreeGrid control.
 
-{% if page.publishingplatform == "typescript" %}
+```typescript
+import { TreeGrid, Page } from '@syncfusion/ej2-treegrid';
+import { sampleData } from './datasource.ts';
+TreeGrid.Inject(Page);
 
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/treegrid/data-binding-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/data-binding-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs2" %}
+let treeGridObj: TreeGrid = new TreeGrid({
+    dataSource: sampleData,
+    childMapping: 'subtasks',
+    allowPaging: true,
+    pageSettings: {pageSize: 7},
+    treeColumnIndex: 1,
+    columns: [
+                { field: 'taskID', headerText: 'Task ID', width: 90, textAlign: 'Right' },
+                { field: 'taskName', headerText: 'Task Name', width: 180 },
+                {
+                    field: 'startDate', headerText: 'Start Date', width: 90, textAlign: 'Right', type: 'date',format: 'yMd'
+                },
+                { field: 'duration', headerText: 'Duration', width: 80, textAlign: 'Right' }
+    ]
+});
 
-{% elsif page.publishingplatform == "javascript" %}
+treeGridObj.appendTo('#TreeGrid');
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/treegrid/data-binding-cs2/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/data-binding-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
+```
 
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs2" %}
-{% endif %}
+> * Remote data binding is not supported for Hierarchy Data.
 
 ### Self-Referential data binding (Flat data)
 
@@ -62,32 +62,31 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 * **ID Field**: This field contains unique values used to identify nodes. Its name is assigned to the [`idMapping`](../../api/treegrid#idMapping) property.
 * **Parent ID Field**: This field contains values that indicate parent nodes. Its name is assigned to the [`parentIdMapping`](../../api/treegrid#parentIdMapping) property.
 
-{% if page.publishingplatform == "typescript" %}
+```typescript
+import { TreeGrid, Page } from '@syncfusion/ej2-treegrid';
+import { projectData } from './datasource.ts';
+TreeGrid.Inject(Page);
 
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/treegrid/data-binding-cs3/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/data-binding-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs3" %}
+let treeGridObj: TreeGrid = new TreeGrid({
+    dataSource: projectData,
+    idMapping: 'TaskID',
+    parentIdMapping: 'parentID',
+    allowPaging: true,
+    treeColumnIndex: 1,
+    pageSettings: {pageSize: 7},
+    columns: [
+                { field: 'TaskID', headerText: 'Task ID', width: 90, textAlign: 'Right' },
+                { field: 'TaskName', headerText: 'Task Name', width: 180 },
+                {
+                    field: 'StartDate', headerText: 'Start Date', width: 90, textAlign: 'Right', type: 'date',format: 'yMd'
+                },
+                { field: 'Duration', headerText: 'Duration', width: 80, textAlign: 'Right' }
+    ]
+});
 
-{% elsif page.publishingplatform == "javascript" %}
+treeGridObj.appendTo('#TreeGrid');
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/treegrid/data-binding-cs3/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/data-binding-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs3" %}
-{% endif %}
+```
 
 > Herewith we have provided list of reserved properties and the purpose we used internally in TreeGrid. We recommend to avoid these reserved properties in your dataSource(To get rid of conflicts).
 
