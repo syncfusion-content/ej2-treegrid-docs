@@ -19,7 +19,6 @@ It supports two kinds of data binding method:
 
 ## Binding with ajax
 
-
 You can use TreeGrid [`dataSource`](../../api/treegrid/#datasource) property to bind the data source to TreeGrid from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to [`dataSource`](../../api/treegrid/#datasource) property by using `onSuccess` event of the Ajax.
 
 {% if page.publishingplatform == "typescript" %}
