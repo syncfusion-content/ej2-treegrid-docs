@@ -1,32 +1,30 @@
 ---
 layout: post
-title: Exporting tree grid in server in ##Platform_Name## Tree Grid control | Syncfusion
-description: Learn here all about Exporting tree grid in server in Syncfusion ##Platform_Name## Tree Grid control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
-control: Exporting tree grid in server 
+title: Exporting Tree Grid in Server in Syncfusion ##Platform_Name## Tree Grid Component
+description: Learn here all about Exporting Tree Grid in Server in Syncfusion ##Platform_Name## Tree Grid Component of Syncfusion Essential JS 2 and more.
+platform: ej2-asp-core-mvc
+control: Exporting TreeGrid in Server
 publishingplatform: ##Platform_Name##
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Exporting tree grid in server in ##Platform_Name## Tree Grid control
 
-The Tree Grid have an option to export the data to Excel in server side using Tree Grid server export library.
+# Exporting Tree Grid in Server
+
+The Tree Grid have an option to export the data to Excel in server side using tree grid server export library.
 
 ## Server dependencies
 
-The Server side export functionality is shipped in the Syncfusion.EJ2.TreeGridExport package, which is available in Essential Studio and [nuget.org](https://www.nuget.org/).The following list of dependencies is required for Tree Grid server side Excel exporting action.
+The Server side export functionality is shipped in the Syncfusion.EJ2.TreeGridExport package, which is available in Essential Studio and [nuget.org](https://www.nuget.org/).The following list of dependencies is required for tree grid server side Excel exporting action.
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.TreeGridExport
-* Syncfusion.Compression.Base
-* Syncfusion.XlsIO.Base
 
 ## Server configuration
 
-The following code snippets shows server configuration using ASP.NET MVC Controller Action.
+The following code snippet shows server configuration using ASP.NET MVC Controller Action.
 
-To Export the Tree Grid in server side, You need to call the [`serverExcelExport`](../../api/treegrid/#serverexcelexport) method for passing the Tree Grid properties to server exporting action.
+To Export the tree grid in server side, You need to call the [`serverExcelExport`](https://ej2.syncfusion.com/documentation/api/treegrid/#serverexcelexport) method for passing the tree grid properties to server exporting action.
 
 ```ts
 public IActionResult ServerSideExporting()
@@ -93,11 +91,11 @@ treegrid.toolbarClick = (args: Object) => {
 
 ```
 
-## CSV export in server side
+## CSV Export in server side
 
-You can export the Tree Grid to CSV format by using the [`serverCsvExport`](../../api/treegrid/#servercsvexport) method which will pass the Grid properties to server.
+You can export the tree grid to CSV format by using the [`serverCsvExport`](https://ej2.syncfusion.com/documentation/api/treegrid/#servercsvexport) method which will pass the tree grid properties to server.
 
-In the below demo, we have invoked the above method inside the [`toolbarClick`](../../api/treegrid/#toolbarclick) event. In server side, we have deserialized the Tree Grid properties and passed to the `CsvExport` method which will export the properties to CSV format.
+In the below demo, we have invoked the above method inside the [`toolbarClick`](https://ej2.syncfusion.com/documentation/api/treegrid#toolbarclick) event. In server side, we have deserialized the tree grid properties and passed to the [`CsvExport`](https://helpej2.syncfusion.com/documentation/api/treegrid/#csvexport) method which will export the properties to CSV format.
 
 ```ts
 public IActionResult ServerSideExporting()
@@ -168,11 +166,11 @@ treegrid.toolbarClick = (args: Object) => {
 
 ## Rotate a header text to a certain degree in the exported tree grid on the server side
 
-The Tree Grid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported Excel file. To achieve this requirement, use the `ServerExcelHeaderQueryCellInfo` event of the Tree Grid.
+The Tree Grid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported Excel file. To achieve this requirement, use the `ExcelHeaderCellRendering` event of the tree grid.
 
-The `ServerExcelHeaderQueryCellInfo` will be triggered when creating a column header for the excel document to be exported in the server side. Customize the column header in this event.
+The `ExcelHeaderCellRendering` will be triggered when creating a column header for the excel document to be exported in the server side. Customize the column header in this event.
 
-In the following demo, using the `HeaderCellRotate` method of the `GridExcelExport` class in the `ServerExcelHeaderQueryCellInfo` event, you can rotate the header text of the column header in the excel exported document.
+In the following demo, using the `HeaderCellRotate` method of the `TreeGridExcelExport` class in the `ExcelHeaderCellRendering` event, you can rotate the header text of the column header in the excel exported document.
 
 ```ts
 public IActionResult ExcelExport(string treeGridModel)
@@ -183,13 +181,13 @@ public IActionResult ExcelExport(string treeGridModel)
     }
     TreeGridExcelExport exp = new TreeGridExcelExport();
     Syncfusion.EJ2.TreeGrid.TreeGrid gridProperty = ConvertTreeGridObject(treeGridModel);
-    gridProperty.ServerExcelHeaderQueryCellInfo = ExcelHeaderQueryCellInfo;
+    gridProperty.ExcelHeaderCellRendering = ExcelHeaderQueryCellInfo;
     return (IActionResult)exp.ExcelExport<TreeGridItems>(gridProperty, TreeGridItems.GetDefaultData());
 }
 
 private void ExcelHeaderQueryCellInfo(object excel)
 {
-    Syncfusion.EJ2.TreeGridExport.ServerExcelHeaderQueryCellInfoEventArgs name = (Syncfusion.EJ2.TreeGridExport.ServerExcelHeaderQueryCellInfoEventArgs)excel;
+    Syncfusion.EJ2.TreeGridExport.ExcelHeaderCellEventArgs name = (Syncfusion.EJ2.TreeGridExport.ExcelHeaderCellEventArgs)excel;
     List<string> headerValues = new List<string>();
     headerValues.Add(name.Column.HeaderText);
     var longestString = headerValues.Where(s => s.Length == headerValues.Max(m => m.Length)).First();
