@@ -91,7 +91,7 @@ Actions for this toolbar template items are defined in the [`toolbarClick`](../.
 {% include code-snippet/treegrid/toolbar-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/toolbar-template-cs1/index.html %}
+{% include code-snippet/treegrid/toolbar-template-cs1/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -104,7 +104,7 @@ Actions for this toolbar template items are defined in the [`toolbarClick`](../.
 {% include code-snippet/treegrid/toolbar-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/toolbar-template-cs1/index.html %}
+{% include code-snippet/treegrid/toolbar-template-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
