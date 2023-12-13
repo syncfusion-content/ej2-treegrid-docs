@@ -307,7 +307,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 {% include code-snippet/treegrid/tree-grid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs1/js/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -323,7 +323,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% include code-snippet/treegrid/tree-grid-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs2/js/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -341,7 +341,7 @@ By default, filtered records are shown along with its parent records. This behav
 {% include code-snippet/treegrid/tree-grid-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs3/js/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -358,7 +358,7 @@ Output will be displayed as follows.
 {% include code-snippet/treegrid/tree-grid-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs4/js/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

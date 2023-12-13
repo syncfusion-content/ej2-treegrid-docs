@@ -20,7 +20,7 @@ In the below demo, while editing the row we have restricted to type the decimal 
 {% include code-snippet/treegrid/restrict-decimal-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/restrict-decimal-cs1/ts/index.html %}
+{% include code-snippet/treegrid/restrict-decimal-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
