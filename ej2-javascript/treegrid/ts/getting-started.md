@@ -214,7 +214,7 @@ The paging feature enables users to view the treegrid record in a paged view. It
 {% include code-snippet/treegrid/tree-grid-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs5/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs5/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -230,7 +230,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% include code-snippet/treegrid/tree-grid-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs6/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs6/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -248,7 +248,7 @@ By default, filtered records are shown along with its parent records. This behav
 {% include code-snippet/treegrid/tree-grid-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs7/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs7/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -273,7 +273,7 @@ Output will be displayed as follows.
 {% include code-snippet/treegrid/tree-grid-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/treegrid/tree-grid-cs8/index.html %}
+{% include code-snippet/treegrid/tree-grid-cs8/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
