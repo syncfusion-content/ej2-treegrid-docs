@@ -1,3 +1,5 @@
+ej.treegrid.TreeGrid.Inject(ej.treegrid.Page);
+
 var data = new ej.data.DataManager({
     url: "Home/DataSource",
     updateUrl: "Home/Update",
