@@ -41,7 +41,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs4" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs4" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -54,7 +54,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs4" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs4" %}
 {% endif %}
 
 > By default, `DataManager` uses `ODataAdaptor` for remote data-binding.
@@ -178,7 +178,7 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs5" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs5" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -191,7 +191,7 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs5" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs5" %}
 {% endif %}
 
 ## Custom adaptor
@@ -209,7 +209,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs6" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs6" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -222,7 +222,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs6" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs6" %}
 {% endif %}
 
 ## Sending additional parameters to the server
@@ -240,7 +240,7 @@ To add a custom parameter to the data request, use the `addParams` method of `Qu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs7" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs7" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -253,7 +253,7 @@ To add a custom parameter to the data request, use the `addParams` method of `Qu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs7" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs7" %}
 {% endif %}
 
 ## Handling HTTP error
@@ -274,7 +274,7 @@ The argument passed to the [`actionFailure`](../../api/treegrid#actionfailure) e
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs8" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs8" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -287,7 +287,7 @@ The argument passed to the [`actionFailure`](../../api/treegrid#actionfailure) e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/treegrid/data-binding-cs8" %}
+{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs8" %}
 {% endif %}
 
 > The [`actionFailure`](../../api/treegrid#actionfailure) event will be triggered not only for the server errors, but
