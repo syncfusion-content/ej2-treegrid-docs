@@ -1,3 +1,5 @@
+ej.treegrid.TreeGrid.Inject(ej.treegrid.Edit, ej.treegrid.VirtualScroll, ej.treegrid.Sort, ej.treegrid.Filter, ej.treegrid.Toolbar);
+
 var data = new ej.data.DataManager({
     adaptor: new ej.data.UrlAdaptor,
     insertUrl: "Home/Insert",
