@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Remote data in ##Platform_Name## Treegrid control | Syncfusion
-description: Learn here all about Remote data in Syncfusion ##Platform_Name## Treegrid control of Syncfusion Essential JS 2 and more.
+title: Remote data in  ##Platform_Name## Treegrid control | Syncfusion
+description: Learn here all about Remote data in Syncfusion  ##Platform_Name## Treegrid control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Remote data 
-publishingplatform: ##Platform_Name##
+publishingplatform:  ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote data in ##Platform_Name## Treegrid control
+# Remote data in  ##Platform_Name## Treegrid control
 
 To bind remote data to TreeGrid component, assign service data as an instance of `DataManager` to the [`dataSource`](../../api/treegrid#datasource) property. To interact with remote data source,  provide the endpoint `url` and define the [`hasChildMapping`](../../api/treegrid#hasChildMapping) property of treegrid.
 
@@ -41,7 +41,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs4" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs4" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -54,7 +54,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs4" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs4" %}
 {% endif %}
 
 > By default, `DataManager` uses `ODataAdaptor` for remote data-binding.
@@ -69,41 +69,29 @@ When [`loadChildOnDemand`](https://ej2.syncfusion.com/documentation/api/treegrid
 
 The following code example describes the behavior of the loadChildOnDemand feature of Tree Grid.
 
-```ts
-import { TreeGrid, Page }from '@syncfusion/ej2-treegrid';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+{% if page.publishingplatform == "typescript" %}
 
-TreeGrid.Inject(Page);
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/treegrid/data-binding-cs9/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/treegrid/edata-binding-cs9/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-let data: DataManager = new DataManager({
-    url: "Home/DataSource",
-    updateUrl: "Home/Update",
-    insertUrl: "Home/Insert",
-    removeUrl: "Home/Delete",
-    batchUrl: "Home/Remove",
-    adaptor: new UrlAdaptor
-});
+{% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/treegrid/data-binding-cs9/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/treegrid/data-binding-cs9/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-let treegrid: TreeGrid = new TreeGrid({
-    dataSource: data,
-    idMapping: 'TaskID',
-    parentIdMapping: 'ParentItem',
-    hasChildMapping: 'isParent',
-    loadChildOnDemand: true,
-    height: 260,
-    allowPaging: true,
-    treeColumnIndex: 1,
-        columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 90 },
-        { field: 'TaskName', headerText: 'Task Name', width: 180 },
-        { field: 'StartDate', headerText: 'Start Date', textAlign: 'Right', width: 90, format: { skeleton: 'yMd', type: 'date' } },
-        { field: 'Duration', headerText: 'Duration', width: 80, textAlign: 'Right' }
-    ]
-});
-treegrid.appendTo('#TreeGrid');
-
-```
+{% endif %}
 
 > Also while using **loadChildOnDemand** we need to handle the child records on server end and it is applicable to CRUD operations also.
 
@@ -190,7 +178,7 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs5" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs5" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -203,7 +191,7 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs5" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs5" %}
 {% endif %}
 
 ## Custom adaptor
@@ -221,7 +209,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs6" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs6" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -234,7 +222,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs6" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs6" %}
 {% endif %}
 
 ## Sending additional parameters to the server
@@ -252,7 +240,7 @@ To add a custom parameter to the data request, use the `addParams` method of `Qu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs7" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs7" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -265,7 +253,7 @@ To add a custom parameter to the data request, use the `addParams` method of `Qu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs7" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs7" %}
 {% endif %}
 
 ## Handling HTTP error
@@ -286,7 +274,7 @@ The argument passed to the [`actionFailure`](../../api/treegrid#actionfailure) e
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs8" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs8" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -299,7 +287,7 @@ The argument passed to the [`actionFailure`](../../api/treegrid#actionfailure) e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs8" %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/treegrid/data-binding-cs8" %}
 {% endif %}
 
 > The [`actionFailure`](../../api/treegrid#actionfailure) event will be triggered not only for the server errors, but
@@ -313,47 +301,29 @@ When using virtualization with remote data binding, it helps you to improve the 
 
 [`hasChildMapping`](https://ej2.syncfusion.com/documentation/api/treegrid/#haschildmapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
 
-```ts
+{% if page.publishingplatform == "typescript" %}
 
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-import { TreeGridComponent, VirtualScroll, Sort, Filter, Edit, Toolbar } from '@syncfusion/ej2-treegrid';
-import './App.css';
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/treegrid/data-binding-cs10/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/treegrid/edata-binding-cs10/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-TreeGrid.Inject(Edit, VirtualScroll, Sort, Filter, Toolbar);
+{% elsif page.publishingplatform == "javascript" %}
 
-let dataManager: DataManager = new DataManager({
-    adaptor: new UrlAdaptor,
-    insertUrl: "Home/Insert",
-    removeUrl: "Home/Delete",
-    updateUrl: "Home/Update",
-    url: "Home/DataSource",
-});
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/treegrid/data-binding-cs10/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/treegrid/data-binding-cs10/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-let treegrid: TreeGrid = new TreeGrid({
-    dataSource: dataManager,
-    idMapping: 'TaskID',
-    parentIdMapping: 'ParentValue',
-    hasChildMapping: 'isParent',
-    loadChildOnDemand: true,
-    expandStateMapping: 'IsExpanded',
-    enableVirtualization: true,
-    height: 400,
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row', newRowPosition: 'Below' },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-    pageSettings: {pageSize: 30},
-    allowPaging: true,
-    allowFiltering: true,
-    allowSorting: true,
-    treeColumnIndex: 1,
-        columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 90 },
-        { field: 'TaskName', headerText: 'Task Name', width: 180 },
-        { field: 'Duration', headerText: 'Duration', width: 80, textAlign: 'Right' }
-    ]
-});
-treegrid.appendTo('#TreeGrid');
-
-```
+{% endif %}
 
 The following code example describes handling of Load on demand at server end.
 
@@ -654,47 +624,29 @@ Tree Grid provides an option to load the child records in the initial rendering 
 
 When using virtualization with `loadChildOnDemand` , it helps you to improve the tree grid performance while loading the child records during the initial rendering for remote data binding by setting [`enableVirtualization`](https://ej2.syncfusion.com/documentation/api/treegrid/#enablevirtualization) as true and `loadChildOnDemand` as true.
 
-```ts
+{% if page.publishingplatform == "typescript" %}
 
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-import { TreeGridComponent, VirtualScroll, Sort, Filter, Edit, Toolbar } from '@syncfusion/ej2-treegrid';
-import './App.css';
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/treegrid/data-binding-cs11/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/treegrid/edata-binding-cs11/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-TreeGrid.Inject(Edit, VirtualScroll, Sort, Filter, Toolbar);
+{% elsif page.publishingplatform == "javascript" %}
 
-let dataManager: DataManager = new DataManager({
-    adaptor: new UrlAdaptor,
-    insertUrl: "Home/Insert",
-    removeUrl: "Home/Delete",
-    updateUrl: "Home/Update",
-    url: "Home/DataSource",
-});
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/treegrid/data-binding-cs11/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/treegrid/data-binding-cs11/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-let treegrid: TreeGrid = new TreeGrid({
-    dataSource: dataManager,
-    idMapping: 'TaskID',
-    parentIdMapping: 'ParentValue',
-    hasChildMapping: 'isParent',
-    loadChildOnDemand: true,
-    expandStateMapping: 'IsExpanded',
-    enableVirtualization: true,
-    height: 400,
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row', newRowPosition: 'Below' },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-    pageSettings: {pageSize: 30},
-    allowPaging: true,
-    allowFiltering: true,
-    allowSorting: true,
-    treeColumnIndex: 1,
-        columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 90 },
-        { field: 'TaskName', headerText: 'Task Name', width: 180 },
-        { field: 'Duration', headerText: 'Duration', width: 80, textAlign: 'Right' }
-    ]
-});
-treegrid.appendTo('#TreeGrid');
-
-```
+{% endif %}
 
 The following code example describes handling of child records at server end.
 
