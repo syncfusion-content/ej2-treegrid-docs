@@ -3,7 +3,7 @@
  */
 
 
-export let sampleData: Object[] = [
+export let griddata: Object[] = [
        {
             "TaskID": 1,
             "TaskName": "Parent Task 1",
