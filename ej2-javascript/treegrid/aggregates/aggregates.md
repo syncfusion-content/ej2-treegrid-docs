@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Aggregates in JavaScript Treegrid Control | Syncfusion
-description: Learn here all about aggregates in Syncfusion Essential JavaScript Treegrid control, its elements and more.
+title: Aggregates in ##Platform_Name## Treegrid Control | Syncfusion
+description: Learn here all about Aggregates in Syncfusion Essential ##Platform_Name## Treegrid control, its elements and more.
 platform: ej2-javascript
 control: Aggregates 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregates in JavaScript Treegrid Control
+# Aggregates in ##Platform_Name## Treegrid Control
 
 Aggregate values are displayed in the TreeGrid footer and in parent row footer for child row aggregate values. It can be configured through `aggregates` property.
  [`field`](../../api/treegrid/aggregateColumnModel/#field) and [`type`](../../api/treegrid/aggregateColumnModel/#type) are the minimum properties required to represent an aggregate column.
