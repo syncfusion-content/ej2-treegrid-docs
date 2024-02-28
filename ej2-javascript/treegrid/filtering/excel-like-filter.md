@@ -2,7 +2,7 @@
 layout: post
 title: Excel like filter in ##Platform_Name## Treegrid control | Syncfusion
 description: Learn here all about Excel like filter in Syncfusion ##Platform_Name## Treegrid control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: ej2-java--script
 control: Excel like filter 
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -48,7 +48,7 @@ You can change the default excel-filter operator by changing the column operator
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/treegrid/filtering-cs2/index.ts %}
+{% include code-snippet/trng-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/treegrid/filtering-cs2/index.html %}
